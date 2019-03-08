@@ -23,6 +23,8 @@ namespace TazeBlog.WebUI.Controllers
             Category category = _categoryService.Get("Permalink='" + id + "'");
             List<Article> articles = _articleService.GetAll("CategoryId='" + category.Id + "'");
 
+            if(articles.Count == 0) { return RedirectToAction("Index", "Home"); }
+
             List<ArticleCategory> ArticleCategoryModel = articles.Select(x => new ArticleCategory
             {
                 Categories = new List<Entities.Concrete.Category>
