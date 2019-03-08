@@ -1,0 +1,60 @@
+﻿@model TazeBlog.Entities.ComplexTypes.ArticleCategory
+
+@{
+    ViewData["Title"] = "Makale Güncelleme";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card-block">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-default">
+
+                <div class="card-block">
+                    <h5>
+                        Makale Güncelle
+                    </h5>
+                    <form asp-action="Update">
+
+                        <div class="form-group form-group-default form-group-default-select2">
+                            <label asp-for="CategoryId" class="control-label">Kategori</label>
+                            <select asp-for="CategoryId" class=" full-width" data-init-plugin="select2">
+                                @foreach (var item in Model.Categories)
+                                {
+                                    if (Model.CategoryId == item.Id)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+
+                                }
+                            </select>
+                            @*<input asp-for="CategoryId" class="form-control" />*@
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label asp-for="Name" class="control-label">Makale Adı</label>
+                            <input asp-for="Name" class="form-control" />
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label asp-for="Permalink" class="control-label">Permalink</label>
+                            <input asp-for="Permalink" class="form-control" />
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label asp-for="Content" class="control-label">İçerik</label>
+                            <textarea asp-for="Content" class="form-control scroll-textarea" style="height:200px">
+                            </textarea>
+                        </div>
+                        <input hidden asp-for="Id" value="@Model.Id" />
+                        <div class="col-lg-12 text-center">
+                            <button class="btn btn-success btn-cons" type="submit">Kaydet</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

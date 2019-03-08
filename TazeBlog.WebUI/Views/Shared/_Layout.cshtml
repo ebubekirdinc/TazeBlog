@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/web-assets/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/web-assets/css/font-awesome.min.css")">
+    <link type=" text/css" rel="stylesheet" href="@Url.Content("~/web-assets/css/style.css")" />
+</head>
+<body>
+    <header id="header">
+        <div id="nav">
+            <div id="nav-fixed">
+               @Html.Partial("_MenuBar")
+            </div>
+        </div>
+    </header>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="@Url.Content("~/web-assets/js/jquery.min.js")"></script>
+    <script src="@Url.Content("~/web-assets/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/web-assets/js/main.js")"></script>
+
+</body>
+</html>

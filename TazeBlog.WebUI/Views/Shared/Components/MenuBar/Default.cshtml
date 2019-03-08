@@ -1,0 +1,14 @@
+﻿@model List<TazeBlog.Entities.Concrete.Category>
+
+<div class="container">
+    <ul class="nav-menu nav navbar-nav">
+        <li class="cat-1" style="margin-right:35px"><a href="/">Taze Blog</a></li>
+
+        @foreach (var item in Model)
+        {
+            <li><a href="@Url.Action("List","Category",new {id=item.Permalink })">@item.Name</a></li>
+        }
+
+    </ul>
+</div>
+

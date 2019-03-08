@@ -1,0 +1,32 @@
+﻿@model List<TazeBlog.Entities.ComplexTypes.ArticleCategory>
+@{
+    ViewData["Title"] = Model.FirstOrDefault().Categories.FirstOrDefault().Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-4">
+        <div class="post" style="border: 1px solid #eee;padding: 15px;border-radius: 10px;">
+            <div class="post-body">
+                <h3 class="post-title"><a href="@Url.Action("Detail","Article",new { id= item.Permalink })">@item.Name.ToUpper()</a></h3>
+                <br />
+                @if (item.Content.Length > 30)
+                {
+                    <h6>@item.Content.Substring(0, 30) ... <a href="#" style="color:forestgreen">Devamını oku</a></h6>
+
+                }
+                else
+                {
+                    <h6>@item.Content</h6>
+                }
+                <hr />
+                <div class="post-meta">
+                    <span class="post-date">@item.CreatedOn</span>
+                    <a class="post-category cat-1" style="float:right" href="@Url.Action("List","Category",new { id=item.Categories.First().Permalink})">@item.Categories.FirstOrDefault().Name</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<TazeBlog.Entities.ComplexTypes.ArticleCategory>
+
+@{
+    ViewData["Title"] = "Makaleler";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card-block">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-default">
+                <div class="card-header separator">
+                    <div class="card-title" style="display:block">
+                        <span class="pull-left" style="line-height: 25px;">Makale Listesi</span>
+                        <a asp-action="Create" class="btn btn-success pull-right btn-xs">
+                            Yeni Makale Oluştur
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card-block">
+                    <div class="card card-transparent">
+                        <div class="card-block">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Makale Adı</th>
+                                            <th>İçerik</th>
+                                            <th>Kategori</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td class="v-align-middle semi-bold">
+                                                @item.Name
+                                            </td>
+                                            <td class="v-align-middle semi-bold">
+                                                @if (item.Content.Length > 20)
+                                                {
+                                                    @item.Content.Substring(0, 20)
+                                                }
+                                                else
+                                                {
+                                                    @item.Content
+                                                }
+                                            </td>
+                                            <td class="v-align-middle semi-bold">
+                                                @item.Categories.FirstOrDefault().Name
+                                            </td>
+                                            <td class="v-align-middle semi-bold text-center">
+                                                <a href="@Url.Action("Update","Article",new {entityId=item.Id})" class="btn btn-complete">
+                                                    <i class="fe fe-edit"></i>
+                                                </a>
+                                                <a href="@Url.Action("Delete", "Article", new {entityId = item.Id})" class="btn btn-danger">
+                                                    <i class="fe fe-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

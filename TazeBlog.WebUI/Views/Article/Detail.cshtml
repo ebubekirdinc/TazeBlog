@@ -1,0 +1,18 @@
+﻿@model TazeBlog.Entities.Concrete.Article
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="col-md-12">
+    <div class="section-row sticky-container">
+        <div class="main-post">
+            <h3>@Model.Name.ToUpper()</h3>
+            @Html.Raw(Model.Content)
+        </div>
+
+    </div>
+
+
+</div>

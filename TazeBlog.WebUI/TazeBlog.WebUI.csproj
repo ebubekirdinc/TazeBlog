@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\assets\img\bankfees.jpg" />
+    <None Include="wwwroot\Content\assets\img\logo.png" />
+    <None Include="wwwroot\Content\assets\img\logo_2x.png" />
+    <None Include="wwwroot\Content\assets\img\profiles\avatar.jpg" />
+    <None Include="wwwroot\Content\assets\img\profiles\avatar2x.jpg" />
+    <None Include="wwwroot\Content\assets\img\profiles\avatar_small.jpg" />
+    <None Include="wwwroot\Content\assets\img\profiles\avatar_small2x.jpg" />
+    <None Include="wwwroot\Content\assets\js\scripts.js" />
+    <None Include="wwwroot\Content\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\Content\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\classie\classie.js" />
+    <None Include="wwwroot\Content\assets\plugins\feather-icons\feathericon.min.css" />
+    <None Include="wwwroot\Content\assets\plugins\font-awesome\css\font-awesome.css" />
+    <None Include="wwwroot\Content\assets\plugins\fonts\feathericon.eot" />
+    <None Include="wwwroot\Content\assets\plugins\fonts\feathericon.svg" />
+    <None Include="wwwroot\Content\assets\plugins\fonts\feathericon.ttf" />
+    <None Include="wwwroot\Content\assets\plugins\fonts\feathericon.woff" />
+    <None Include="wwwroot\Content\assets\plugins\fonts\feathericon.woff2" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery-easy.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery-ui.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.actual.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.ioslist.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.scrollbar.css" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.scrollbar.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.unveil.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.validate.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\jquery\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\Content\assets\plugins\modernizr.custom.js" />
+    <None Include="wwwroot\Content\assets\plugins\pace\pace-theme-flash.css" />
+    <None Include="wwwroot\Content\assets\plugins\pace\pace.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\select2\css\select2.min.css" />
+    <None Include="wwwroot\Content\assets\plugins\select2\js\select2.full.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\switchery\css\switchery.min.css" />
+    <None Include="wwwroot\Content\assets\plugins\switchery\js\switchery.min.js" />
+    <None Include="wwwroot\Content\assets\plugins\tether\js\tether.min.js" />
+    <None Include="wwwroot\Content\pages\css\pages-icons.css" />
+    <None Include="wwwroot\Content\pages\css\themes\light.css" />
+    <None Include="wwwroot\Content\pages\fonts\montserrat\montserrat-bold-webfont.svg" />
+    <None Include="wwwroot\Content\pages\fonts\montserrat\Montserrat-Bold.ttf" />
+    <None Include="wwwroot\Content\pages\fonts\montserrat\montserrat-regular-webfont.svg" />
+    <None Include="wwwroot\Content\pages\fonts\montserrat\Montserrat-Regular.ttf" />
+    <None Include="wwwroot\Content\pages\fonts\pages-icon\Pages-icon.eot" />
+    <None Include="wwwroot\Content\pages\fonts\pages-icon\Pages-icon.svg" />
+    <None Include="wwwroot\Content\pages\fonts\pages-icon\Pages-icon.ttf" />
+    <None Include="wwwroot\Content\pages\fonts\pages-icon\Pages-icon.woff" />
+    <None Include="wwwroot\Content\pages\img\progress\progress-circle-success.svg" />
+    <None Include="wwwroot\Content\pages\js\pages.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TazeBlog.Business\TazeBlog.Business.csproj" />
+    <ProjectReference Include="..\TazeBlog.Core\TazeBlog.Core.csproj" />
+    <ProjectReference Include="..\TazeBlog.Entities\TazeBlog.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

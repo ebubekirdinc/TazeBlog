@@ -1,0 +1,85 @@
+﻿@model TazeBlog.Entities.ComplexTypes.LoginModel
+@{
+    ViewBag.Title = "TazeBlog Yönetim Paneli";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <link href="@Url.Content("~/Content/assets/plugins/pace/pace-theme-flash.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/font-awesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/jquery-scrollbar/jquery.scrollbar.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/assets/plugins/select2/css/select2.min.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/assets/plugins/switchery/css/switchery.min.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/pages/css/pages-icons.css")" rel="stylesheet" type="text/css">
+
+    <link class="main-stylesheet" href="@Url.Content("~/Content/pages/css/themes/light.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="fixed-header menu-pin">
+    <div class="login-wrapper ">
+        <div class="bg-pic">
+            <img style="opacity: 1;height:auto;width:100%" src="@Url.Content("~/Content/assets/img/bankfees.jpg")" data-src="assets/img/demo/bankfees.jpg" data-src-retina="assets/img/demo/bankfees.jpg" alt="" class="lazy">
+
+            <div class="bg-caption pull-bottom sm-pull-bottom p-l-20 m-b-20" style="background: white;">
+                <h2 class="semi-bold ">
+                    Taze Bilişim Yönetim Paneli
+                </h2>
+                <p class="small">
+                    tazebt.com | Taze Bilişim Teknolojileri
+                </p>
+            </div>
+        </div>
+        <div class="login-container bg-white">
+            <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+                <h2>TazeBlog</h2>
+                <p class="p-t-10 m-b-20">Yönetim Paneli Giriş Sayfası</p>
+
+                <form asp-action="Login" asp-controller="User" asp-area="Admin" method="post">
+                    <div class="form-group form-group-default">
+                        <label asp-for="Username">Kullanıcı Adı</label>
+                        <div class="controls">
+                            <input type="text" class="form-control" asp-for="Username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-default">
+                        <label asp-for="Password">Şifre</label>
+                        <div class="controls">
+                            <input type="password" class="form-control" asp-for="Password" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-cons m-t-10" type="submit">Giriş Yap</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="@Url.Content("~/Content/assets/plugins/pace/pace.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery/jquery-1.11.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/modernizr.custom.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-ui/jquery-ui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tether/js/tether.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap/js/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery/jquery-easy.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-unveil/jquery.unveil.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-ios-list/jquery.ioslist.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-actual/jquery.actual.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/select2/js/select2.full.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/classie/classie.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/switchery/js/switchery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-validation/js/jquery.validate.min.js")" type="text/javascript"></script>
+    <!-- END VENDOR JS -->
+    <script src="pages/js/pages.min.js"></script>
+
+</body>
+</html>
