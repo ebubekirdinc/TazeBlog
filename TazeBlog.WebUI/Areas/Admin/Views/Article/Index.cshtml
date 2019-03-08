@@ -41,13 +41,13 @@
                                             <td class="v-align-middle semi-bold">
                                                 @if (item.Content.Length > 20)
                                                 {
-                                                    @item.Content.Substring(0, 20)
+                                                    @Html.Raw(item.Content.Substring(0, 20))
                                                 }
                                                 else
                                                 {
-                                                    @item.Content
-                                                }
-                                            </td>
+                                                    @Html.Raw(item.Content)
+                                               }
+                                                </td>
                                             <td class="v-align-middle semi-bold">
                                                 @item.Categories.FirstOrDefault().Name
                                             </td>

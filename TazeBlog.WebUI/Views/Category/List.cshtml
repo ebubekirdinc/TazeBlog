@@ -13,12 +13,12 @@
                 <br />
                 @if (item.Content.Length > 30)
                 {
-                    <h6>@item.Content.Substring(0, 30) ... <a href="#" style="color:forestgreen">Devamını oku</a></h6>
+            <h6>@Html.Raw(item.Content.Substring(0, 30)) ...</h6> <a href="@Url.Action("Detail","Article",new { id = item.Permalink })" style="color:forestgreen;font-size:14px;">Devamını oku</a>
 
                 }
                 else
                 {
-                    <h6>@item.Content</h6>
+            <h6> @Html.Raw(item.Content)</h6>
                 }
                 <hr />
                 <div class="post-meta">
