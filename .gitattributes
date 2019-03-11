@@ -62,3 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 css/* linguist-vendored
+*.gs linguist-language=Javascript
